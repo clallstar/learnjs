@@ -1,0 +1,44 @@
+<style>
+    body {
+        font-size: 20px;
+    }
+    
+    .one {
+        border: 1px solid #eee;
+        width: 300px;
+        height: 50px;
+        background: #ccc;
+        color: red;
+    }
+    
+    .two {
+        border: 1px solid #ccc;
+        width: 300px;
+        height: 50px;
+        background: #9CF;
+        color: blue;
+    }
+</style>
+</head>
+
+<body>
+    <p id="p1">hello world</p>
+    <input type="button" value="添加样式" onclick="add()" /> //设置点击按键"添加样式"，激活add()函数，添加p1的className属性
+    <p id="p2" class="one">nice to meet you</p>
+    <input type="button" value="更改外观" onclick="modify()" /> //设置点击按键"更改外观"，激活modify()函数，改变p2的className属性
+
+    <script type="text/javascript">
+        function add() {
+            var p1 = document.getElementById("p1");
+            p1.className = "one"; //格式   obj.className = "" 
+            // document.write(p1.className);
+        }
+
+        function modify() {
+            var p2 = document.getElementById("p2");
+            p2.className = "two";
+            // document.write(p2.className);
+        }
+        //   移除元素的属性用   obj.removeAttribute("style")
+    </script>
+</body>

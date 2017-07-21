@@ -1,9 +1,0 @@
-<Script>
-var   char=clallstar;
-document.write("char");   //输出char
-document.write(char);    //输出clallstar
-document.write("hello"+"<br>")
-document.write("wrold")          // <br>为换行作用 输出  hello（换行）wrold     
-document.write("&nbsp"+"hello"+"&nbsp;&nbsp"+"wrold") //&nbsp为空格输出 hello  world 
-   
-</Script>

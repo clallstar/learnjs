@@ -1,0 +1,10 @@
+<p id="con">hello world</p>
+<script>
+    var char;
+    char = document.getElementById("con").innerHTML;
+    document.write(char)
+        //输出 hello world
+    document.getElementById("con").innerHTML = "hello";
+    //此时id为"con"的p标签的值为 hello
+    //document.getElementById("con")获取的是P标签的位置 innerHTML读取P标签的值
+</script>

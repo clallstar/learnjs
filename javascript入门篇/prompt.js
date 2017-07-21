@@ -1,9 +1,0 @@
-<script>
-//var char = prompt(a,b)  a为用户不可修改内容.b为用户返回值
-
-var char =prompt("这次考了多少分"，"在这里输入分数");
-if(char>=60)
-    alert("恭喜你及格了");
-else
-    alert("还需要努力哦");
-</script>

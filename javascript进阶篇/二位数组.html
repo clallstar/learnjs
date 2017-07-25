@@ -1,0 +1,11 @@
+<script type="text/javascript">
+    var char = new Array(); //创建一个长度为3的数组
+    for (i = 0; i < 3; i++) {
+        char[i] = new Array(); //长度为3的数组的每一个元素又包含6个数组
+        for (j = 0; j < 6; j++) {
+            char[i][j] = i * j; //给每一个元素赋值
+            // document.write(char[i][j]+"<br>");
+            document.write("char[" + i + "][" + j + "]的值:" + char[i][j] + "<br>"); //最后输出为 char[i][j]的值为i*j
+        }
+    }
+</script>

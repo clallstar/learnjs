@@ -1,0 +1,14 @@
+<script>
+    var char = "Hello World!"; //字符串直接定义后就能访问属性和方法。
+    document.write(char.length); //length字符串长度   属性
+    document.write(char.toUpperCase()); //toUpperCase全部转化为大写  方法
+    document.write(char.toLowerCase()); //toLowerCase全部转化为小写  方法
+    document.write(char.charAt(char.length - 1)); //charAt返回某一位字符,输出char中最后一位字符 
+    document.write(char.indexOf("o", 5)); //   obj.indexOf("要找的字符串",查找的起始位置(不写则默认首位))   从第5位字符开始查找"O",输出7
+    document.write(char.split("o")); //obj.split("拆分标志",拆分组数(不写则拆分至末尾))  按照o拆分 输出 Hell, W,rld  
+    document.write(char.split("")); //   每个字符都拆分   输出  H,e,l,l,o, ,W,o,r,l,d
+    document.write(char.split("o", 2)); //   按照o拆分出两组    输出 Hell, W
+    document.write(char.substring(0, 5)) //obj.substring(提取起始位置,提取最终位置(如不写则提取到末尾))  输出Hello
+    document.write(char.substring(6, 11)) //   提取第6位到11位(不包含第11位)  输出 World
+    document.write(char.substr(0, 5)) //obj.substr(起始位置,提取长度(如不写则提取到末尾))  输出Hello
+    document.write(char.substr(6)) //从第6位提取到末尾   输出World!

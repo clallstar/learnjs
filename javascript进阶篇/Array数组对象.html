@@ -1,0 +1,37 @@
+<script>
+    /*
+        数组对象常用方法
+        concat()           连接两个或更多数组，并返回结果
+        join()             把数组所有元素放入一个字符串并通过指定的分隔符进行分分隔
+        pop()              删除并返回数组的最后一个元素
+        shift()            删除并返回数组的第一个元素
+        unshift()          向数组的开头添加一个或更多元素，并返回新的长度
+        push()             向数组的末尾添加一个或更多的元素并返回新的长度
+        reverse()          颠倒数组中元素的顺序
+        slice()            从某个已有的数组返回选定的元素
+        sort()             对数组的元素进行排序
+        splice()           删除元素，并向数组添加新元素
+        toSource()         返回该对象的源代码
+        toString()         把数组转化为字符串，并返回结果
+        toLocaleString()   把数组转化为本地数组，并返回结果
+        valueOf()          返回数组对象的原始值
+        */
+    var mya1 = new Array("hello!");
+    var mya2 = new Array("I", "love");
+    var mya3 = new Array("JavaScript", "!");
+    document.write(mya1.concat(mya2, mya3)); //输出hello!,I,love,JavaScript,!
+    var mya4 = mya1.concat(mya2, mya3);
+    document.write(mya4.join(".")) //将mya4中的元素用“.”分隔开生成一个字符串  
+        //输出hello!.I.love.JavaScript.!
+    document.write(mya4.join("")) //如不加分隔符则紧密连接输出 hello!IloveJavaScript!
+    document.write(mya4.join()) //如不输入则默认逗号连接 输出hello!,I,love,JavaScript,!
+    document.write(mya4.reverse()) //颠倒数组会修改原来的数组 输出!,JavaScript,love,I,hello!
+    document.write(mya4.slice(2, 3)) //将mya4数组的第二位提取出来生成一个子数组，原数组不变，输出love
+        //1表示标号为1的位置，-1表示倒数第一个。
+    var Arr = ["1", "12", "100", "80", "23", "56"];
+
+    function comp(a, b) {
+        return a - b;
+    }
+    document.write(Arr.sort(comp)); //排序  输出1,12,23,56,80,100 如果将a-b改为b-a 则降序输出
+</script>

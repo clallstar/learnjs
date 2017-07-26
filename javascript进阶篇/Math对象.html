@@ -1,0 +1,53 @@
+<script>
+    /*
+        常用Math对象属性
+        E            返回算术常量e，即自然对数的底数(约为2.718)
+        LN2          返回2的自然对数(约为0.693)
+        LN10         返回10的自然对数(约为2.302)
+        LOG2E        返回以2为底的e的对数(约为1.442)
+        LOG10E       返回以10为底的e的对数(约为0.434)
+        PI           返回圆周率(约为3.14159)
+        SQRT2        返回2的平方根(约为1.414)
+        SQRT1_2      返回2的平方根的倒数(约为0.707)
+        
+        常用Math对象方法
+        abx(x)      返回绝对值
+        acos(x)     返回反余弦值
+        asin(x)     返回反正弦值
+        atan(x)     返回反正切值
+        atan2(y,x)  返回极坐标(x,y)与x轴所成的角度(以弧度为单位) 
+        ceil(x)     返回x的向上取整
+        cos(x)      返回x的余弦值
+        sin(x)      返回x的正弦值 
+        tan(x)      返回x的正切值
+        exp(x)      返回x的指数
+        floor(x)    返回x的向下取整
+        log(x)      返回以e为底的x的自然对数
+        max(x,y)    返回x,y的最大值
+        min(x,y)    返回x,y的最小值
+        pow(x,y)    返回x的y次幂
+        random()    返回随机一个0~1之间的数
+        round(x)    返回x的四舍五入的整数
+        sqrt(x)     返回x的平方根
+        toSource()  返回该对象的源代码
+        value()     返回Math对象的原始值
+        */
+    document.write(Math.ceil(3.3) + "<br>"); //对数进行向上取整 其中ceil()中必须是一个数值  输出4
+    document.write(Math.ceil(-0.1) + "<br>"); //输出0
+    document.write(Math.ceil(-9.9) + "<br>"); //输出-9
+    document.write(Math.ceil(8.9)); //输出9
+
+    document.write(Math.floor(3.3) + "<br>") //对数进行向下取整 其中floor()中必须是一个数值  输出3
+    document.write(Math.floor(-0.1) + "<br>") //输出-1
+    document.write(Math.floor(-9.9) + "<br>") //输出-10
+    document.write(Math.floor(8.9) + "<br>") //输出8
+
+    document.write(Math.round(3.3) + "<br>") //对数进行四舍五入 其中round()中必须是一个数值 输出3
+    document.write(Math.round(-0.1) + "<br>") //输出0
+    document.write(Math.round(-9.9) + "<br>") //输出-10
+    document.write(Math.round(8.9) + "<br>") //输出9
+
+    document.write(Math.random()) //获得0~1之间的一个随机数
+    document.write(Math.random() * 10) //获得0~10之间的一个随机数
+    document.write(Math.random() * 100) //获得0~100之间的一个随机数
+</script>

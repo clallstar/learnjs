@@ -1,0 +1,67 @@
+<script>
+    /*
+                常用浏览器对象方法
+                alert()          显示带有一段消息和一个确认按钮的警告框
+                prompt()         显示可提示用户输入的对话框
+                confirm()        显示带有一段消息以及确认按钮和取消按钮的对话框
+                open()           打开一个新的浏览器窗口或查找一个已命名的窗口
+                close()          关闭浏览器窗口
+                print()          打印当前窗口内容
+                focus()          把键盘焦点给予一个窗口
+                blur()           把键盘焦点从顶层窗口移开
+                moveBy()         可相对窗口的当前坐标把它移动指定的像素
+                moveTo()         把窗口的左上角移动到一个指定的坐标
+                resizeTo()       把窗口的大小调整到指定的宽度和高度
+                scrollBy()       按照指定的像素值来滚动内容
+                scrollTo()       把内容滚动到指定的坐标
+                setInterval()    每隔指定的时间执行代码
+                setTinmeout()    在指定的延迟时间之后来执行代码
+                clearInterval()  取消setInterval()的设置
+                clearTimeout()   取消setTimeout()的设置
+                */
+    //------------------------------------------------------------
+    var attime;
+
+    function clock() {
+        var time = new Date(); //提取系统时间
+        attime = time.getHours() + ":" + time.getMinutes() + ":" + time.getSeconds(); //按照"时:分:秒"这个格式将时间提取到attime中
+        document.getElementById("clock").value = attime; //将attime的内容放到ID为clock的地址中
+    }
+    var i = setInterval(clock, 1000); //设定每隔1000毫秒运行一次clock函数
+    //最后在form中输出ID为clock的内容 即输出attime 并给上一个标签i
+    function stop(); {
+        clearinterval(i); //清除标签为i的计时器 即计时停止
+    }
+</script>
+</head>
+
+<body>
+    <form>
+        <input type="text" id="clock" size="10" />
+        <input type="button" value="stop" onclick="stop()" />
+    </form>
+</body>
+
+
+<script type="text/javascript">
+    var num = 0;
+
+    function startCount() {
+        document.getElementById('count').value = num;
+        num = num + 1;
+        i = setTimeout(startCount, 1000);
+        //startCount()中嵌套了setTimeout，每执行一次startCount()，延迟1000毫秒后执行下一次startCount()，形成循环计时器
+    }
+
+    function stopCcount(); {
+        clearTimeout(i); //清除i延时计时
+    }
+</script>
+
+<body>
+    <form>
+        <input type="text" id="count" />
+        <input type="button" value="start" onclick="startCount()" />
+        <input type="button" value="Stop" onclick="stopCount()" />
+    </form>
+</body>

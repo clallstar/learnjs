@@ -1,0 +1,37 @@
+<script>
+    /*对象属性
+            appCodeName        浏览器代码名的字符串表示
+            appName            返回浏览器的名称
+            appVersion         返回浏览器的平台和版本信息
+            platform           返回运行浏览器的操作系统平台
+            userAgent          返回由客户机发送的服务器的user_agent头部的值
+            */
+    var aN = navigator.appName; //Netscape
+    var aCN = navigator.appCodeName; //Mozilla
+    var aV = navigator.appVersion; //5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36
+    var pf = navigator.platform; //Win32
+    var uA = navigator.userAgent; //Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36
+    document.write(aN + "<br>" + aCN + "<br>" + aV + "<br>" + pf + "<br>" + uA + "<br>")
+</script>
+<script type="text/javascript">
+    function validB() {
+        var u_agent = navigator.userAgent;
+        var B_name = "不是想用的主流浏览器!";
+        if (u_agent.indexOf("Firefox") > -1) { //检测userAgent头部值中是否含有浏览器敏感词
+            B_name = "Firefox";
+        } else if (u_agent.indexOf("Chrome") > -1) { //indexOf方法不存在敏感词就会返回-1
+            B_name = "Chrome";
+        } else if (u_agent.indexOf("MSIE") > -1 && u_agent.indexOf("Trident") > -1) {
+            B_name = "IE(8-10)";
+        }
+        document.write("浏览器:" + B_name + "<br>");
+        document.write("u_agent:" + u_agent + "<br>");
+    }
+</script>
+</head>
+
+<body>
+    <form>
+        <input type="button" value="查看浏览器" onclick="validB()">
+    </form>
+</body>

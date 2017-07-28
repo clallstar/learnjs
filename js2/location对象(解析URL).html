@@ -1,0 +1,24 @@
+<script>
+    /*
+    protocol
+    |     |       host       |pathname|        search         |   hash  | 
+    http://www.imooc.com:8080/list.php?courseid=8&chapterid=86#mediaid118
+         |  hostname   |port|
+    {                             href                                     }
+    location对象属性
+    hash         设置或返回从#开始的URL(锚)
+    host         设置或返回主机名和当URL的端口号
+    hostname     设置或返回当前URL的主机名 
+    href         设置或返回完整的URL
+    pathname     设置或返回当前URL的路径部分
+    port         设置或返回当前URL的端口号
+    protocol     设置或返回当前URL的协议
+    search       设置或返回从?开始的URL(查询部分)
+
+    location对象方法
+    assign()     加载新的文档
+    reload()     重新加载当前文档
+    replace()    用新的文档替换当前文档
+    */
+    document.write(window.location.href) //输出完整的URL(等同于length属性的语法)
+</script>

@@ -1,0 +1,14 @@
+<script>
+    /*  语法　window.screen.属性
+    对象属性
+    availHeight    窗口可以使用的屏幕高度，以像素为单位
+    availWidth     窗口可以使用的屏幕宽度，以像素为单位
+    colorDepth     用户浏览器表示的颜色位数，通常为32位(每像素的位数)
+    pixelDepth     用户浏览器表示的颜色位数，通常为32位(每像素的位数) (IE不支持此属性)
+    height         屏幕的高度，单位像素
+    width          屏幕的宽度，单位像素
+    */
+    document.write("屏幕宽度：" + screen.width + "px" + "<br>");
+    document.write("屏幕高度：" + screen.height + "px"); //输出当前屏幕的宽高
+    document.write("可用高度：" + screen.availHeight + "<br>");
+    document.write("可用宽度：" + screen.availWidth); //输出当前屏幕的可用宽高  高度中任务栏不可用要少40px的样子

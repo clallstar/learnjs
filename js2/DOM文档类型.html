@@ -1,0 +1,39 @@
+<body>
+    <h2 id="con">I love JavaScript</H2>
+    <p> JavaScript使网页显示动态效果并实现与用户交互功能。</p>
+    <script type="text/javascript">
+        /*
+        节点属性
+        nodeName         返回一个字符串，其内容是给点节点的名字
+        nodeType         返回一个整数，这个数值代表给定节点的类型
+        nodeValue        返回给定节点的当前值
+
+        childNides       返回一个数组，这个数组由给定元素节点的子节点构成
+        firstChild       返回第一个子节点
+        lastChild        返回最后一个子节点
+        parentNode       返回一个给定节点的父节点
+        nextSibling      返回给定节点的下一个子节点   
+        previousSibling  返回给定节点的上一个子节点
+
+        DOM操作                     
+        createElement(element)    创建一个新的元素节点
+        createTextNode()          创建一个包含着给定文本的新文本节点
+        appendChild()             指定节点的最后一个子节点列表之后添加一个新的子节点
+        insertBefore()            将一个给定节点插入到一个给点元素节点的给定子节点的前面
+        removeChild()             从一个给定元素中删除一个子节点
+        replaceChild()            把一个给定父元素里的一个子节点替换为另外一个节点
+        */
+        var i = document.getElementById("con")
+        i.style.color = "red";
+        i.style.backgroundColor = "#CCC"; //引用style属性
+        function XS() {
+            i.style.display = "block";
+        }
+
+        function YC() {
+            i.style.display = "none";
+        }
+    </script>
+    <input type="button" value="显示" onclick="XS()" />
+    <input type="button" value="隐藏" onclick="YC()" />
+</body>
